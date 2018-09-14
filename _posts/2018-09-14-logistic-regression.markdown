@@ -11,7 +11,7 @@ The logistic regression model is simply a non-linear transformation of the linea
 normal distribution and constrains the estimated probabilities to lie between 0
 and 1.
 
-[s-shaped distribution](http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png)
+![s-shaped distribution](http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png)
 [source][s-shaped]
 
 #### how it works
