@@ -1,0 +1,2 @@
+# akinariobi.github.io
+blog
