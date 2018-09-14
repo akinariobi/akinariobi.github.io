@@ -8,7 +8,7 @@ description: "Machine learning, AI and big data"
 author: "Julia Shcherbakova"
 
 url: "http://akinariobi.github.io"
-baseurl: "/blog"
+baseurl: "/"
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
 author-bio: "I'm a dog. I develop things. This is my blog so why don't you close this damn side panel (cursed by most UX Designers but I don't care, I do whatever I want) and start reading my awesome stuff?"
