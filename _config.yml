@@ -7,8 +7,8 @@ description: "Machine learning, AI and big data"
 # Your name. Will show in your footer + sidebar
 author: "Julia Shcherbakova"
 
-url: "http://akinariobi.github.io/"
-baseurl: ""
+url: "http://akinariobi.github.io"
+baseurl: "/"
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
 author-bio: "I'm a fdog. I develop things. This is my blog so why don't you close this damn side panel (cursed by most UX Designers but I don't care, I do whatever I want) and start reading my awesome stuff?"
@@ -29,5 +29,5 @@ paginate_path: "/page/:num"
 # SCSS
 
 sass:
-  sass_dir: css
+  sass_dir: _scss
   style: :compressed
