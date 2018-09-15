@@ -31,7 +31,7 @@ Let's build a logistic regression in Python using [Heart Disease][http://archive
 
 The raw input data from this data set is a text file (.data) with 14 columns and multiple rows in it.
 
-{% highlight %}
+{% highlight js %}
 63.0,1.0,1.0,145.0,233.0,1.0,2.0,150.0,0.0,2.3,3.0,0.0,6.0,0
 67.0,1.0,4.0,160.0,286.0,0.0,2.0,108.0,1.0,1.5,2.0,3.0,3.0,2
 67.0,1.0,4.0,120.0,229.0,0.0,2.0,129.0,1.0,2.6,2.0,2.0,7.0,1
@@ -43,7 +43,7 @@ The raw input data from this data set is a text file (.data) with 14 columns and
 63.0,1.0,4.0,130.0,254.0,0.0,2.0,147.0,0.0,1.4,2.0,1.0,7.0,2
 53.0,1.0,4.0,140.0,203.0,1.0,2.0,155.0,1.0,3.1,3.0,0.0,7.0,1
 ...
-{% endhighlight %}
+{% endhighlight js %}
 
 
 Each column corresponds to defined attribute:
@@ -120,7 +120,7 @@ sns.set(style="whitegrid", color_codes=True)
 ```
 
 ![data image](../assets/img/classification-using-binary-logistic-regression/1.png)
-<img src="{{ site.baseurl }}/assets/img/classification-using-binary-logistic-regression/1.png">
+
 
 
 
