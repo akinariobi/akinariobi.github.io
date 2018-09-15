@@ -27,7 +27,7 @@ This algorithm estimates the relationship between the dependent variable, what w
 
 #### example
 
-Let's build a logistic regression in Python using [Heart Disease][http://archive.ics.uci.edu/ml/datasets/Heart+Disease] data set from [UC Irvine Machine Learning Repository][data].
+Let's build a logistic regression in Python using [Heart Disease][dataset] data set from [UC Irvine Machine Learning Repository][data].
 
 The raw input data from this data set is a text file (.data) with 14 columns and multiple rows in it.
 
@@ -119,7 +119,7 @@ sns.set(style="white")
 sns.set(style="whitegrid", color_codes=True)
 ```
 
-![data image](../assets/img/classification-using-binary-logistic-regression/1.png)
+![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/1.png)
 
 
 
@@ -127,4 +127,4 @@ sns.set(style="whitegrid", color_codes=True)
 
 [s-shaped]: http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png
 [data]: http://archive.ics.uci.edu/ml/index.php
-[data_source]: http://archive.ics.uci.edu/ml/datasets/Heart+Disease
+[dataset]: http://archive.ics.uci.edu/ml/datasets/Heart+Disease
