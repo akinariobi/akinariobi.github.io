@@ -21,17 +21,17 @@ This algorithm estimates the relationship between the dependent variable, what w
 
 #### practical cases
 
-    * You could use binomial logistic regression to understand whether exam performance can be predicted based on revision time, test anxiety and lecture attendance (i.e., where the dependent variable is "exam performance", measured on a dichotomous scale – "passed" or "failed" – and you have three independent variables: "revision time", "test anxiety" and "lecture attendance").
+* You could use binomial logistic regression to understand whether exam performance can be predicted based on revision time, test anxiety and lecture attendance (i.e., where the dependent variable is "exam performance", measured on a dichotomous scale – "passed" or "failed" – and you have three independent variables: "revision time", "test anxiety" and "lecture attendance").
 
-    * ..or in order to determine if the email is spam (1) or not (0)
+* ..or in order to determine if the email is spam (1) or not (0)
 
 #### example
 
 Let's build a logistic regression in Python using [Heart Disease][http://archive.ics.uci.edu/ml/datasets/Heart+Disease] data set from [UC Irvine Machine Learning Repository][data].
 
-The raw data from this data set is a text file (.data) with 14 columns and multiple rows in it.
+The raw input data from this data set is a text file (.data) with 14 columns and multiple rows in it.
 
-```
+{% highlight %}
 63.0,1.0,1.0,145.0,233.0,1.0,2.0,150.0,0.0,2.3,3.0,0.0,6.0,0
 67.0,1.0,4.0,160.0,286.0,0.0,2.0,108.0,1.0,1.5,2.0,3.0,3.0,2
 67.0,1.0,4.0,120.0,229.0,0.0,2.0,129.0,1.0,2.6,2.0,2.0,7.0,1
@@ -43,7 +43,8 @@ The raw data from this data set is a text file (.data) with 14 columns and multi
 63.0,1.0,4.0,130.0,254.0,0.0,2.0,147.0,0.0,1.4,2.0,1.0,7.0,2
 53.0,1.0,4.0,140.0,203.0,1.0,2.0,155.0,1.0,3.1,3.0,0.0,7.0,1
 ...
-```
+{% endhighlight %}
+
 
 Each column corresponds to defined attribute:
 
@@ -81,6 +82,9 @@ Attribute Information:
                 -- Value 1: > 50% diameter narrowing
                 (in any major vessel: attributes 59 through 68 are vessels))
 ```
+**predict variable**:
+
+Num (y): has a patient *high* risk of heart disease? (1) -- yes, (0) -- no.
 
 I converted .data to CSV in order to get a better visualization of each operation I'm doing.  
 
@@ -116,6 +120,9 @@ sns.set(style="whitegrid", color_codes=True)
 ```
 
 ![data image](../assets/img/classification-using-binary-logistic-regression/1.png)
+<img src="{{ site.baseurl }}/assets/img/classification-using-binary-logistic-regression/1.png">
+
+
 
 
 [s-shaped]: http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png
