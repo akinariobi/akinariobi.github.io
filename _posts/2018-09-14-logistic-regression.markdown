@@ -44,7 +44,7 @@ Each column corresponds to defined attribute.
 
 **Attribute Information**
 
-{% highlight %}
+{% highlight js %}
 
 -- word_freq_make:         continuous.
 -- word_freq_address:      continuous.
@@ -105,7 +105,7 @@ Each column corresponds to defined attribute.
 -- capital_run_length_total:   continuous.
 -- spam_or_not: binary.
 
-{% endhighlight %}
+{% endhighlight js %}
 
 **Predict variable**
 
