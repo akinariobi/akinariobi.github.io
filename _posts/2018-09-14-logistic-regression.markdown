@@ -264,7 +264,7 @@ Let's write few lines of code to display names of selected columns
 
 for i in range(len(rfe.support_)):
 	res = list()
-  # removing last 'spam' column
+  # removing 'spam' column
 	data_col = list(data.columns)[0:-1]
 	if list(rfe.support_)[i] == True:
 		print(data_col[i])
