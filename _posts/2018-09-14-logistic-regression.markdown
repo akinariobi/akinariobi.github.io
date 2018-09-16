@@ -148,7 +148,7 @@ with open('spambase.data', 'r') as in_file:
 
 {% endhighlight python %}
 
-First of all, we need to import all Python dependencies that we're going to use in this algorithm implementation. Henceforth, I'll be using Jupyter Notebook for better representation.
+First of all, we need to import all Python dependencies that we're going to use for this algorithm's implementation. Henceforth, I'll be using Jupyter Notebook for better representation.
 
 {% highlight python %}
 
