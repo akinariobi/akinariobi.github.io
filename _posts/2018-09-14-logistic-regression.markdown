@@ -118,14 +118,14 @@ Spam: The given email is spam or not? (1) -- yes, (0) -- no.
 
 Note that as mentioned in [documentation][datadoc] the "spam" concept is diverse: advertisements for products/web sites, make money fast schemes, chain letters, pornography...
 
-```
+{% highlight js %}
 Our collection of spam e-mails came from our postmaster and individuals who had filed spam.
 Our collection of non-spam e-mails came from filed work and personal e-mails,
 and hence the word 'george' and the area code '650' are indicators of non-spam.
 These are useful when constructing a personalized spam filter. One would either
 have to blind such non-spam indicators or get a very wide collection of non-spam
 to generate a general purpose spam filter.
-```
+{% endhighlight js %}
 
 I converted .data to CSV to get a better visualization of each operation I'm doing.  
 
@@ -434,7 +434,7 @@ array([[444,  71],
 
 {% endhighlight python %}
 
-Thus, we've got 788 correct and 227 incorrect predictions and built a probabisitic model. Perfect!
+Thus, we've got 788 correct and 227 incorrect predictions and built a probabilistic model. Perfect!
 
 [s-shaped]: http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png
 [data]: http://archive.ics.uci.edu/ml/index.php
