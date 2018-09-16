@@ -45,6 +45,7 @@ Each column corresponds to defined attribute.
 **Attribute Information**
 
 {% highlight %}
+
 -- word_freq_make:         continuous.
 -- word_freq_address:      continuous.
 -- word_freq_all:          continuous.
@@ -103,11 +104,23 @@ Each column corresponds to defined attribute.
 -- capital_run_length_longest: continuous.
 -- capital_run_length_total:   continuous.
 -- spam_or_not: binary.
+
 {% endhighlight %}
 
 **Predict variable**
 
 Spam (y): The given email is spam or not? (1) -- yes, (0) -- no.
+
+Note that as mentioned in [documentation][datadoc] the "spam" concept is diverse: advertisements for products/web sites, make money fast schemes, chain letters, pornography...
+
+	> Our collection of spam e-mails came from our postmaster and
+	individuals who had filed spam.  Our collection of non-spam
+	e-mails came from filed work and personal e-mails, and hence
+	the word 'george' and the area code '650' are indicators of
+	non-spam.  These are useful when constructing a personalized
+	spam filter.  One would either have to blind such non-spam
+	indicators or get a very wide collection of non-spam to
+	generate a general purpose spam filter.
 
 I converted .data to CSV so as to get a better visualization of each operation I'm doing.  
 
@@ -133,6 +146,7 @@ with open('spambase.data', 'r') as in_file:
 First of all, we need to import all python dependencies. I'm also using Jupyter Notebook for better representation.
 
 {% highlight python %}
+
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
@@ -143,6 +157,7 @@ plt.rc("font", size=16)
 import seaborn as sns
 sns.set(style="white")
 sns.set(style="whitegrid", color_codes=True)
+
 {% endhighlight python %}
 
 ![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/1.png)
@@ -152,11 +167,12 @@ As displayed at fig. 1 there's 4601 rows and 58 columns in this file. Note that 
 
 Let's explore the data what we have.
 
-![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/2.png)
-![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/3.png)
+![data image1](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/2.png)
+![data image2](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/4.png)
+![data image3](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/3.png)
 *fig. 2*
 
-As image above and [`spambase documentations`][datadoc] says there's 1813 (39.4%) spam and 2788 (60.6%) non-spam messages in this database.
+As image above and [spambase documentations][datadoc] says there's 1813 (39.4%) spam and 2788 (60.6%) non-spam messages in this database so the ratio of spam to non-spam instances is 39:61.
 
 [s-shaped]: http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png
 [data]: http://archive.ics.uci.edu/ml/index.php
