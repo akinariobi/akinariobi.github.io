@@ -27,21 +27,15 @@ This algorithm estimates the relationship between the dependent variable, what w
 
 #### example
 
-Let's build a logistic regression in Python using [Heart Disease][dataset] data set from [UC Irvine Machine Learning Repository][data].
+Let's build a logistic regression in Python using [Spambase Data Set][dataset] data set from [UC Irvine Machine Learning Repository][data].
 
-The raw input data from this data set is a text file (.data) with 14 columns and multiple rows in it.
+The raw input data from this data set is a text file (.data) with 48 columns and multiple rows in it.
 
 {% highlight js %}
-63.0,1.0,1.0,145.0,233.0,1.0,2.0,150.0,0.0,2.3,3.0,0.0,6.0,0
-67.0,1.0,4.0,160.0,286.0,0.0,2.0,108.0,1.0,1.5,2.0,3.0,3.0,2
-67.0,1.0,4.0,120.0,229.0,0.0,2.0,129.0,1.0,2.6,2.0,2.0,7.0,1
-37.0,1.0,3.0,130.0,250.0,0.0,0.0,187.0,0.0,3.5,3.0,0.0,3.0,0
-41.0,0.0,2.0,130.0,204.0,0.0,2.0,172.0,0.0,1.4,1.0,0.0,3.0,0
-56.0,1.0,2.0,120.0,236.0,0.0,0.0,178.0,0.0,0.8,1.0,0.0,3.0,0
-62.0,0.0,4.0,140.0,268.0,0.0,2.0,160.0,0.0,3.6,3.0,2.0,3.0,3
-57.0,0.0,4.0,120.0,354.0,0.0,0.0,163.0,1.0,0.6,1.0,0.0,3.0,0
-63.0,1.0,4.0,130.0,254.0,0.0,2.0,147.0,0.0,1.4,2.0,1.0,7.0,2
-53.0,1.0,4.0,140.0,203.0,1.0,2.0,155.0,1.0,3.1,3.0,0.0,7.0,1
+0,0.64,0.64,0,0.32,0,0,0,0,0,0,0.64,0,0,0,0.32,0,1.29,1.93,0,0.96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.778,0,0,3.756,61,278,1
+0.21,0.28,0.5,0,0.14,0.28,0.21,0.07,0,0.94,0.21,0.79,0.65,0.21,0.14,0.14,0.07,0.28,3.47,0,1.59,0,0.43,0.43,0,0,0,0,0,0,0,0,0,0,0,0,0.07,0,0,0,0,0,0,0,0,0,0,0,0,0.132,0,0.372,0.18,0.048,5.114,101,1028,1
+0.06,0,0.71,0,1.23,0.19,0.19,0.12,0.64,0.25,0.38,0.45,0.12,0,1.75,0.06,0.06,1.03,1.36,0.32,0.51,0,1.16,0.06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.06,0,0,0.12,0,0.06,0.06,0,0,0.01,0.143,0,0.276,0.184,0.01,9.821,485,2259,1
+0,0,0,0,0.63,0,0.31,0.63,0.31,0.63,0.31,0.31,0.31,0,0,0.31,0,0,3.18,0,0.31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.137,0,0.137,0,0,3.537,40,191,1
 ...
 {% endhighlight js %}
 
@@ -50,63 +44,93 @@ Each column corresponds to defined attribute:
 
 ```
 Attribute Information:
-   -- Only 14 used
-      -- 1. (age)       
-      -- 2. (sex)       
-      -- 3. (cp: chest pain type
-                -- Value 1: typical angina
-                -- Value 2: atypical angina
-                -- Value 3: non-anginal pain
-                -- Value 4: asymptomatic)        
-      -- 4. (trestbps: resting blood pressure (in mm Hg on admission to the
-              hospital))  
-      -- 5. (chol or serum cholestoral in mg/dl)      
-      -- 6. (fbs: (fasting blood sugar > 120 mg/dl)  (1 = true; 0 =         false))       
-      -- 7. (restecg: resting electrocardiographic results
-                -- Value 0: normal
-                -- Value 1: having ST-T wave abnormality (T wave inversions and/or ST
-                            elevation or depression of > 0.05 mV)
-                -- Value 2: showing probable or definite left ventricular hypertrophy
-                            by Estes' criteria)   
-      -- 8. (thalach: maximum heart rate achieved)   
-      -- 9. (exang: exercise induced angina (1 = yes; 0 = no))     
-      -- 10. (oldpeak: ST depression induced by exercise relative to rest)   
-      -- 11. (slope: the slope of the peak exercise ST segment
-                -- Value 1: upsloping
-                -- Value 2: flat
-                -- Value 3: downsloping)     
-      -- 12. (ca: number of major vessels (0-3) colored by flourosopy)        
-      -- 13. (thal: 3 = normal; 6 = fixed defect; 7 = reversable defect)      
-      -- 14. (the predicted attribute) (num: diagnosis of heart disease (angiographic disease status)
-                -- Value 0: < 50% diameter narrowing
-                -- Value 1: > 50% diameter narrowing
-                (in any major vessel: attributes 59 through 68 are vessels))
+-- word_freq_make:         continuous.
+-- word_freq_address:      continuous.
+-- word_freq_all:          continuous.
+-- word_freq_3d:           continuous.
+-- word_freq_our:          continuous.
+-- word_freq_over:         continuous.
+-- word_freq_remove:       continuous.
+-- word_freq_internet:     continuous.
+-- word_freq_order:        continuous.
+-- word_freq_mail:         continuous.
+-- word_freq_receive:      continuous.
+-- word_freq_will:         continuous.
+-- word_freq_people:       continuous.
+-- word_freq_report:       continuous.
+-- word_freq_addresses:    continuous.
+-- word_freq_free:         continuous.
+-- word_freq_business:     continuous.
+-- word_freq_email:        continuous.
+-- word_freq_you:          continuous.
+-- word_freq_credit:       continuous.
+-- word_freq_your:         continuous.
+-- word_freq_font:         continuous.
+-- word_freq_000:          continuous.
+-- word_freq_money:        continuous.
+-- word_freq_hp:           continuous.
+-- word_freq_hpl:          continuous.
+-- word_freq_george:       continuous.
+-- word_freq_650:          continuous.
+-- word_freq_lab:          continuous.
+-- word_freq_labs:         continuous.
+-- word_freq_telnet:       continuous.
+-- word_freq_857:          continuous.
+-- word_freq_data:         continuous.
+-- word_freq_415:          continuous.
+-- word_freq_85:           continuous.
+-- word_freq_technology:   continuous.
+-- word_freq_1999:         continuous.
+-- word_freq_parts:        continuous.
+-- word_freq_pm:           continuous.
+-- word_freq_direct:       continuous.
+-- word_freq_cs:           continuous.
+-- word_freq_meeting:      continuous.
+-- word_freq_original:     continuous.
+-- word_freq_project:      continuous.
+-- word_freq_re:           continuous.
+-- word_freq_edu:          continuous.
+-- word_freq_table:        continuous.
+-- word_freq_conference:   continuous.
+-- char_freq_;:            continuous.
+-- char_freq_(:            continuous.
+-- char_freq_[:            continuous.
+-- char_freq_!:            continuous.
+-- char_freq_$:            continuous.
+-- char_freq_#:            continuous.
+-- capital_run_length_average: continuous.
+-- capital_run_length_longest: continuous.
+-- capital_run_length_total:   continuous.
+-- spam_or_not: binary.
 ```
 **predict variable**:
 
-Num (y): has a patient *high* risk of heart disease? (1) -- yes, (0) -- no.
+Spam (y): The given email is spam or not? (1) -- yes, (0) -- no.
 
 I converted .data to CSV in order to get a better visualization of each operation I'm doing.  
 
-```python
+*Note: wf - word frequency, cf - character frequency*
+
+{% highlight python %}
 
 # .data to csv converter
 
 import csv
 
-with open('processed.cleveland.data', 'r') as in_file:
+with open('spambase.data', 'r') as in_file:
     stripped = (line.strip() for line in in_file)
     lines = (line.split(",") for line in stripped if line)
     with open('data.csv', 'w') as out_file:
         writer = csv.writer(out_file)
-        writer.writerow(('age', 'sex', 'chest pain type', 'blood pressure', 'serum cholestoral', 'fasting blood sugar', 'resting electrocardiographic results', 'max heart rate achieved', 'exercise induced angina', 'ST depression', 'nb of major vessels', 'thal', 'num (y)'))
+        writer.writerow(('(wf) make', '(wf) address', '(wf) all', '(wf) 3d', '(wf) our', '(wf) over', '(wf) remove', '(wf) internet', '(wf) order', '(wf) mail', '(wf) receive', '(wf) will', '(wf) people', '(wf) report', '(wf) addresses', '(wf) free', '(wf) business', '(wf) email', '(wf) you', '(wf) credit', '(wf) your', '(wf) font', '(wf) 000', '(wf) money', '(wf) hp', '(wf) hpl', '(wf) george', '(wf) 650', '(wf) lab', '(wf) labs', '(wf) telnet', '(wf) 857', '(wf) data', '(wf) 415', '(wf) 85', '(wf) technology', '(wf) 1999', '(wf) parts', '(wf) pm', '(wf) direct', '(wf) cs', '(wf) meeting', '(wf) original', '(wf) project', '(wf) re', '(wf) edu', '(wf) table', '(wf) conference', '(cf) ;', '(cf) )', '(cf) [', '(сf) !', '(cf) $', '(cf) #', 'capital_run_length_average','capital_run_length_longest','capital_run_length_total',  'spam (y)'))
         writer.writerows(lines)
 
-```
+
+{% endhighlight python %}
 
 First of all, we need to import all python dependencies. I'm using Jupyter Notebook for better representation.
 
-```python
+{% highlight python %}
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
@@ -117,7 +141,7 @@ plt.rc("font", size=16)
 import seaborn as sns
 sns.set(style="white")
 sns.set(style="whitegrid", color_codes=True)
-```
+{% endhighlight python %}
 
 ![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/1.png)
 
@@ -127,4 +151,4 @@ sns.set(style="whitegrid", color_codes=True)
 
 [s-shaped]: http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png
 [data]: http://archive.ics.uci.edu/ml/index.php
-[dataset]: http://archive.ics.uci.edu/ml/datasets/Heart+Disease
+[dataset]: https://archive.ics.uci.edu/ml/datasets/spambase
