@@ -357,7 +357,7 @@ cf_dollar          5.7654     0.8386  6.8754 0.0000      4.1219     7.4089
 
 #### optimization time
 
-The **P** value is bigger than 0.05 for *(wf) cs*, *(wf) lab*, *(wf) adresses*, so let's remove them. Now take a look at standard error column (Std. Err.): George's standard deviation is too high so let's remove George from our list and let's also remove all features with standard deviation bigger than |3|.
+The **P** value is bigger than 0.05 for *(wf) cs*, *(wf) lab*, *(wf) adresses*, so let's remove them. Now take a look at standard error column (Std. Err.): George's standard deviation is too high so let's remove George from our list and let's also remove all features with standard deviation bigger than modulo 3.
 
 **Desired Output:**
 
