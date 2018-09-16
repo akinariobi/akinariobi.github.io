@@ -23,13 +23,13 @@ This algorithm estimates the relationship between the dependent variable, what w
 
 * You could use binomial logistic regression to understand whether exam performance can be predicted based on revision time, test anxiety and lecture attendance (i.e., where the dependent variable is "exam performance", measured on a dichotomous scale – "passed" or "failed" – and you have three independent variables: "revision time", "test anxiety" and "lecture attendance").
 
-* ..or in order to determine if the email is spam (1) or not (0)
+* ..or to determine if the email is spam (1) or not (0)
 
 #### example
 
 Let's build a logistic regression in Python using [Spambase Data Set][dataset] data set from [UC Irvine Machine Learning Repository][data].
 
-The raw input data from this data set is a text file (.data) with 48 columns and multiple rows in it.
+The raw input data from this data set is a text file (.data) with 58 columns and multiple rows in it.
 
 {% highlight js %}
 0,0.64,0.64,0,0.32,0,0,0,0,0,0,0.64,0,0,0,0.32,0,1.29,1.93,0,0.96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.778,0,0,3.756,61,278,1
@@ -40,10 +40,11 @@ The raw input data from this data set is a text file (.data) with 48 columns and
 {% endhighlight js %}
 
 
-Each column corresponds to defined attribute:
+Each column corresponds to defined attribute.
 
-```
-Attribute Information:
+**Attribute Information**
+
+{% highlight %}
 -- word_freq_make:         continuous.
 -- word_freq_address:      continuous.
 -- word_freq_all:          continuous.
@@ -102,12 +103,13 @@ Attribute Information:
 -- capital_run_length_longest: continuous.
 -- capital_run_length_total:   continuous.
 -- spam_or_not: binary.
-```
-**predict variable**:
+{% endhighlight %}
+
+**Predict variable**
 
 Spam (y): The given email is spam or not? (1) -- yes, (0) -- no.
 
-I converted .data to CSV in order to get a better visualization of each operation I'm doing.  
+I converted .data to CSV so as to get a better visualization of each operation I'm doing.  
 
 *Note: wf - word frequency, cf - character frequency*
 
@@ -128,7 +130,7 @@ with open('spambase.data', 'r') as in_file:
 
 {% endhighlight python %}
 
-First of all, we need to import all python dependencies. I'm using Jupyter Notebook for better representation.
+First of all, we need to import all python dependencies. I'm also using Jupyter Notebook for better representation.
 
 {% highlight python %}
 import pandas as pd
@@ -144,11 +146,19 @@ sns.set(style="whitegrid", color_codes=True)
 {% endhighlight python %}
 
 ![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/1.png)
+*fig. 1*
 
+As displayed at fig. 1 there's 4601 rows and 58 columns in this file. Note that it's recommended to use higher amount of data than that mentioned for this algorithm in order to get more precise results.
 
+Let's explore the data what we have.
 
+![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/2.png)
+![data image](https://akinariobi.github.io/assets/img/classification-using-binary-logistic-regression/3.png)
+*fig. 2*
 
+As image above and [`spambase documentations`][datadoc] says there's 1813 (39.4%) spam and 2788 (60.6%) non-spam messages in this database.
 
 [s-shaped]: http://blog.datumbox.com/wp-content/uploads/2013/11/multinomial-logistic-regression.png
 [data]: http://archive.ics.uci.edu/ml/index.php
 [dataset]: https://archive.ics.uci.edu/ml/datasets/spambase
+[datadoc]: https://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.DOCUMENTATION
