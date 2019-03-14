@@ -30,6 +30,8 @@ SW:
 * raising invoices
 
 ***Standardized documents: No***
+
+
 ***Electronic document management: No***
 
 **Transport procedures**
@@ -38,6 +40,8 @@ SW:
 * providing the relevant shipping documents
 
 ***Standardized documents: Yes***
+
+
 ***Electronic document management: Partly***
 
 **Regulatory procedures**
@@ -47,6 +51,8 @@ SW:
 * providing delivery guarantees
 
 ***Standardized documents: Partly***
+
+
 ***Electronic document management: Partly***
 
 **Financial procedures**
@@ -56,6 +62,8 @@ SW:
 * verifying bank documents
 
 ***Standardized documents: No***
+
+
 ***Electronic document management: No***
 
 
