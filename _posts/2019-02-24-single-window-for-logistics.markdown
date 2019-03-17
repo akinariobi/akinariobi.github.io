@@ -15,7 +15,7 @@ Also, you can find Single Window data harmonization guidelines for developers on
 
 #### how it could be useful
 
-SW:
+Single Window:
 
 * Increases productivity of customs service as well as any parties involved in trade and transport.
 * Allows to optimize the use and management of commercial sector and government resources.
@@ -66,5 +66,25 @@ SW:
 
 ***Electronic document management: No***
 
+
+#### current information interaction scheme
+
+![interaction scheme](https://akinariobi.github.io/assets/img/single-window-for-logistics/D1.png)
+
+Drawbacks:
+
+1. Increasement of number of transactions
+2. Increasement of time spent on registration
+3. Huge amount of documents required for items registration
+4. Rising transport costs
+5. Complexity and instability of electronic declarations
+6. Upredictability of customs procedures in supply chain
+7. Non-trasparency of the whole process
+
+#### information interaction with single window
+
+![interaction scheme](https://akinariobi.github.io/assets/img/single-window-for-logistics/D2.png)
+
+You can resolve every problem (drawback) listed above using Single Window. It would help companies to decrease supply chain costs due to reduction in delays, provide efficient allocation of resources, improve prediction accuracy in supply chain management. 
 
 [wco]: http://www.wcoomd.org/en/topics/facilitation/instrument-and-tools/tools/single-window-guidelines.aspx
