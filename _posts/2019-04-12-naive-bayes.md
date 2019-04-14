@@ -20,8 +20,8 @@ For example, if we're trying to analyze the sentence we assume that every word i
 
 #### Formula
 
-* P(A|B): the probability of hypothesis A given the data B. This is known as posterior probability.
-* P(B|A): the probability of data B given that the hypothesis A was true. This is known as posterior probability.
+* P(A | B): the probability of hypothesis A given the data B. This is known as posterior probability.
+* P(B | A): the probability of data B given that the hypothesis A was true. This is known as posterior probability.
 * P(A): the probability of hypothesis A being true (regardless of the data). This is known as the prior probability of A.
 * P(B): the probability of the data (regardless of the hypothesis). This is known as the prior probability.
 
