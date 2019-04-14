@@ -18,7 +18,12 @@ of each other. That is changing the value of one feature, does not directly infl
  or change the value of any of the other features used in the algorithm.
 For example, if we're trying to analyze the sentence we assume that every word in a sentence is independent of the other ones. This means that we’re no longer looking at entire sentences, but rather at individual words. So for our purposes, “I like learning maths” is the same as “maths like learning I” and “I maths like learning”.
 
+#### Formula
 
+* P(A|B): the probability of hypothesis A given the data B. This is known as posterior probability.
+* P(B|A): the probability of data B given that the hypothesis A was true. This is known as posterior probability.
+* P(A): the probability of hypothesis A being true (regardless of the data). This is known as the prior probability of A.
+* P(B): the probability of the data (regardless of the hypothesis). This is known as the prior probability.
 
 
 [wco]: http://www.wcoomd.org/en/topics/facilitation/instrument-and-tools/tools/single-window-guidelines.aspx
