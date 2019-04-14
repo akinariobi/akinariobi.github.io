@@ -4,7 +4,7 @@ title:  "Few words about Naïve Bayes classifier. Uhmm... hmm..."
 date:   2019-04-12 23:13:20
 ---
 
-*I write this article in order to better understand some machine learning algorithms*
+*I write this article in order to better understand commonly used machine learning algorithms*
 
 ![cover image](https://akinariobi.github.io/assets/img/naive-bayes/1.png)
 
