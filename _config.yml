@@ -1,5 +1,5 @@
 # Title of your blog; shows in the header
-name: "akinariobi"
+name: "mathbonus"
 
 # Description of your content (will only be used on Google Search)
 description: "Machine learning, AI, Big Data and Algorithms"
@@ -7,7 +7,7 @@ description: "Machine learning, AI, Big Data and Algorithms"
 # Your name. Will show in your footer + sidebar
 author: "Julia Shcherbakova"
 
-url: "http://akinariobi.github.io"
+url: "http://mathbonus.github.io"
 baseurl: "/"
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
@@ -15,7 +15,7 @@ author-bio: "I'm web developer passionate about tech, machine learning and cloud
 
 # Social Accounts (mine, as placeholders)
 
-github: akinariobi
+github: mathbonus
 
 # Other (refer to http://jekyllrb.com/docs/home/ for further details on the below)
 

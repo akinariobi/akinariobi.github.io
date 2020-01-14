@@ -1,2 +1,2 @@
-# akinariobi.github.io
+# mathbonus.github.io
 blog
